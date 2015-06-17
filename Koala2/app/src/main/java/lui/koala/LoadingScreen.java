@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.ImageView;
 //import android.view.Window;
 
 public class LoadingScreen extends Activity {
@@ -15,10 +16,15 @@ public class LoadingScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading_screen);
 
-        String fontpath = "src/main/assets/Fonts/Montserrat-Regular.ttf";
-        TextView koala = (TextView) findViewById(R.id.textView);
-        Typeface tf = Typeface.createFromAsset(getAssets(), "Fonts/Montserrat-Regular.ttf");
-        koala.setTypeface(tf);
+        //set font
+        TextView ala = (TextView) findViewById(R.id.textView);
+        TextView k = (TextView) findViewById(R.id.textView2);
+        Typeface tf = Typeface.createFromAsset(getAssets(), "Fonts/Odin Rounded - Bold.otf");
+        ala.setTypeface(tf);
+        k.setTypeface(tf);
+
+        ImageView img = (ImageView) findViewById(R.id.koala);
+        img.setImageDrawable(getResources().getDrawable(R.drawable.koalalogobrows));
     }
 
 
